@@ -15,11 +15,21 @@
   </head>
   <body>
     <div class="img-container">
-      <img src="qi-test.jpg" id="img-qi">
+      <img id="img-qi">
     </div>
     
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
     <script>
-      setTimeout("location.reload(true);",60000);
+      function updateImage() {
+        var timestamp = Date.now() / 1000;
+        $("#img-qi").attr("src", "qi.jpg?v=" + timestamp);
+      }
+      $(function() {
+        setInterval(updateImage, 60*1000);
+      });
     </script>
   </body>
 </html>
