@@ -23,7 +23,13 @@
   </head>
   <body>
     <div class="container">
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTB2zMtRHC_6Q3QUviALtZ2uS9XcK0AbxMmW8wBizixalyLzw1Nqj-950s7DFFgMVUj01QBMdFbaiO9/embed?start=true&loop=true&delayms=3000&rm=minimal" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe id="google-slide" src="https://docs.google.com/presentation/d/e/2PACX-1vTB2zMtRHC_6Q3QUviALtZ2uS9XcK0AbxMmW8wBizixalyLzw1Nqj-950s7DFFgMVUj01QBMdFbaiO9/embed?start=true&loop=true&delayms=3000&rm=minimal" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
+    <script>
+    setInterval(reload, 10*1000); 
+    function reload() {
+      document.getElementById('google-slide').src += '';
+    }
+    </script>
   </body>
 </html>
